@@ -1,0 +1,16 @@
+<Application x:Class="TCP_IP_sniffer.App" xmlns:vm="clr-namespace:TCP_IP_sniffer.ViewModel" xmlns:view="clr-namespace:TCP_IP_sniffer.View" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:TCP_IP_sniffer" StartupUri="View/MainWindow.xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" d1p1:Ignorable="d" xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006">
+  <Application.Resources>
+    <ResourceDictionary>
+        <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True"/>
+        <DataTemplate DataType="{x:Type vm:SnifferViewModel}">
+            <view:SnifferView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:StatisticsViewModel}">
+            <view:StatisticsView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:AboutViewModel}">
+            <view:AboutView />
+        </DataTemplate>
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>

@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="TCP_IP_sniffer.View.AboutView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TCP_IP_sniffer.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <!-- Sniffer view -->
+    <GroupBox Margin="5,5,5,5"
+                  BorderBrush="Blue"
+                  BorderThickness="2">
+        <GroupBox.Header>
+            <TextBlock FontWeight="Bold" Text="About view"></TextBlock>
+        </GroupBox.Header>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="180"></ColumnDefinition>
+                <ColumnDefinition Width="475*"></ColumnDefinition>
+                <ColumnDefinition Width="10*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"></RowDefinition>
+                <RowDefinition Height="300*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Width="128"
+                   Height="128" 
+                   Source="/Resources/sniffer.png" 
+                   Stretch="Uniform"></Image>
+
+            <GroupBox Grid.Row="0" Grid.Column="1" 
+                      Grid.RowSpan="2"
+                      Header="About Easy TCP/IP sniffer" 
+                      Margin="5,5,5,5"
+                      Padding="5,5,5,5"
+                      BorderBrush="Blue"
+                      BorderThickness="2">
+                <StackPanel>
+                    <Label Margin="5,20,0,0" FontSize="14.5" Content="External libraries used include:"></Label>
+                    <Label Margin="5,0,0,1">
+                        <Label.Content>
+                            <TextBlock Text="OxyPlot.Wpf version=1.0.0"></TextBlock>
+                        </Label.Content>
+                    </Label>
+                    <Label Margin="5,0,0,1">
+                        <Label.Content>
+                            <TextBlock Text="Pcap.Net.x86 version=1.0.4.1"></TextBlock>
+                        </Label.Content>
+                    </Label>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+    </GroupBox>
+</UserControl>
